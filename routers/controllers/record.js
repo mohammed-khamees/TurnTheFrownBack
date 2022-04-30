@@ -9,7 +9,7 @@ const getAllRecords = (req, res) => {
 				.status(200)
 				.json(
 					result.sort(
-						(a, b) => Number(b.amountOfTurn) - Number(a.amountOfTurn),
+						(a, b) => Number(a.amountOfTurn) - Number(b.amountOfTurn),
 					),
 				);
 		})
@@ -21,16 +21,10 @@ const getAllRecords = (req, res) => {
 const getUserRecords = (req, res) => {
 	const { user } = req.params;
 	recordModel
-		.find({ user })
+		.findOne({ user })
 		.populate('user', 'username -_id')
 		.then((result) => {
-			res
-				.status(200)
-				.json(
-					result.sort(
-						(a, b) => Number(b.amountOfTurn) - Number(a.amountOfTurn),
-					),
-				);
+			res.status(200).json(result);
 		})
 		.catch((err) => {
 			res.status(400).json(err);
