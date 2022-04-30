@@ -31,11 +31,7 @@ user.statics.authenticateBasic = async function (username, pass) {
 				userId: user._id,
 			};
 
-			const options = {
-				expiresIn: '60m',
-			};
-
-			return [jwt.sign(payload, process.env.SECRET, options), 200];
+			return [jwt.sign(payload, process.env.SECRET), 200, user];
 		}
 
 		return ['Invalid Username or Password', 403];

@@ -25,7 +25,9 @@ const login = (req, res) => {
 		.authenticateBasic(username, password)
 		.then((result) => {
 			if (result[1] === 200)
-				return res.status(result[1]).json({ token: result[0], username });
+				return res
+					.status(result[1])
+					.json({ token: result[0], username, userId: result[2]._id });
 
 			res.status(result[1]).json(result[0]);
 		})
