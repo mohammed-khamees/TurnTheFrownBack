@@ -14,9 +14,9 @@
 
 - PORT=5000
 - DB_URL= **#YOUR DATABASE URL#**
-  - MongoDB Trail URL [mongodb+srv://Mohammed:Mohammed.418693@cluster0.n5xei.mongodb.net/myFirstDatabase?retryWrites=true&w=majority](mongodb+srv://Mohammed:Mohammed.418693@cluster0.n5xei.mongodb.net/myFirstDatabase?retryWrites=true&w=majority)
+  - **MongoDB Trail URL:** [mongodb+srv://Mohammed:Mohammed.418693@cluster0.n5xei.mongodb.net/myFirstDatabase?retryWrites=true&w=majority](mongodb+srv://Mohammed:Mohammed.418693@cluster0.n5xei.mongodb.net/myFirstDatabase?retryWrites=true&w=majority)
 - SECRET= **#YOURSECRETKEY#**
-  - Trail Secret Key **SECRETKey**
+  - Trail Secret Key: **SECRETKey**
 
 3- Run the server => `npm start`
 
