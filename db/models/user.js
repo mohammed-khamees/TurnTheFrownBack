@@ -10,7 +10,7 @@ const user = new mongoose.Schema({
 		lowercase: true,
 		unique: true,
 	},
-	password: { type: String, required: true, trim: true, lowercase: true },
+	password: { type: String, required: true },
 });
 
 // Hashed the password
